@@ -1,0 +1,9 @@
+{
+    "server": {
+        "port": 8000
+    },
+    "log":{
+        "logLevel": "info",
+        "format": "json"
+    }
+}
