@@ -4,7 +4,7 @@ import (
 	"boilerplate/config"
 	"boilerplate/db/sqlitedb"
 	"boilerplate/model/example"
-	"boilerplate/src/handler"
+	"boilerplate/src/handlers"
 	"fmt"
 	"os"
 
@@ -33,7 +33,7 @@ func startHttpServer() {
 	}))
 
 	// register handler
-	handler.RegisterHandler(e)
+	handlers.RegisterHandler(e)
 
 	//start server
 	port := fmt.Sprintf(":%+v", config.Config.Server.Port)
@@ -56,4 +56,5 @@ func startDb() {
 
 	dbCon.Db.Create(y)
 	dbCon.Db.CreateInBatches(x, len(x))
+	dbCon.Db.First(x)
 }

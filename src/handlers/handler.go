@@ -1,7 +1,7 @@
-package handler
+package handlers
 
 import (
-	"boilerplate/src/handler/example"
+	"boilerplate/src/handlers/example"
 
 	"github.com/labstack/echo"
 )
